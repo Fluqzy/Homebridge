@@ -1,14 +1,14 @@
 #!/bin/sh
 
 # Dieses Bash-Script installiert die Homebridge auf einem Raspberry Pi
-# created by cooper @ my.makesmart.net
+# created by cooper @ my.makesmart.net forked by tim @ fluqzy.eu
 
-INSTALLERURL=https://github.com/makesmartnet/homebridge-installer
+INSTALLERURL=https://github.com/Fluqzy/Homebridge
 
 # Willkommensnachricht
 clear
 echo
-echo "Willkommen beim makesmart Homebridge-Installer!"
+echo "Willkommen beim Homebridge-Installer!"
 echo
 echo "Du wirst im Laufe der Installation nach deinem Passwort gefragt."
 echo "Das Passwort wird für root-Rechte zum Installieren der Software benötigt."
@@ -33,7 +33,7 @@ then
 else
   # Hier wird Node installiert
   echo "Node wird installiert. Bitte warten ..."
-  curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
+  curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
   sudo apt install -y nodejs gcc g++ make python net-tools
   node -v
   sudo npm install -g npm
@@ -59,7 +59,7 @@ sudo hb-service install --user homebridge
 # Config-Datei anpassen
 
 # Dieses Bash-Script aktualisiert die Homebridge-config
-# created by cooper @ my.makesmart.net
+# created by cooper @ my.makesmart.net forked by tim @ fluqzy.eu
 
 # Zuerst prüfen, ob die config.json exisitert
 
@@ -72,7 +72,7 @@ if [[ -f "$CONFIG" ]]; then
     # Bridge-PIN ändern
     sudo jq -c '.bridge.pin = "123-45-678"' "$CONFIG" > tmp.$$.json && sudo mv tmp.$$.json "$CONFIG"
     # Bridge-Name ändern
-    sudo jq -c '.bridge.name = "makesmart-server"' "$CONFIG" > tmp.$$.json && sudo mv tmp.$$.json "$CONFIG"
+    sudo jq -c '.bridge.name = "Homebridge"' "$CONFIG" > tmp.$$.json && sudo mv tmp.$$.json "$CONFIG"
 
     # Temp .json-File wieder löschen
     find . -name "*.json" -type f -print0 | xargs -0 /bin/rm -f

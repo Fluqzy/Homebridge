@@ -3,7 +3,7 @@ Simple and clean Homebridge Installer for Raspberry Pi.
 
 This script installs [Homebridge](https://homebridge.io/) on your Raspberry Pi.
 
-To install Homebridge type in following commands:
+To install Homebridge type in following commands (requires [curl](https://curl.se/)):
 
 ### Run the Script
 

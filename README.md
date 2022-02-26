@@ -8,5 +8,5 @@ To install Homebridge type in following commands (requires [curl](https://curl.s
 ### Run the Script
 
 ```shell
-curl -s https://raw.github.com/Fluqzy/Homebridge/master/homebridge.sh | bash
+sh -c "$(curl -fsSL https://raw.github.com/Fluqzy/Homebridge/master/homebridge.sh)"
 ```

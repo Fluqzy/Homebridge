@@ -10,3 +10,6 @@ To install Homebridge type in following commands (requires [curl](https://curl.s
 ```shell
 sh -c "$(curl -fsSL https://raw.github.com/Fluqzy/Homebridge/master/homebridge.sh)"
 ```
+```shell
+curl -fsSL https://raw.github.com/Fluqzy/Homebridge/master/homebridge.sh | sudo bash
+```

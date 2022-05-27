@@ -34,7 +34,7 @@ else
   # Hier wird Node installiert
   echo "Node wird installiert. Bitte warten ..."
   curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
-  sudo apt install -y nodejs gcc g++ make python net-tools
+  sudo apt install -y nodejs gcc g++ make python3 net-tools
   node -v
   sudo npm install -g npm
 fi
